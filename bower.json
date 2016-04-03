@@ -1,0 +1,11 @@
+{
+  "name": "clase3",
+  "description": "Proyecto de angular",
+  "main": "index.js",
+  "authors": [
+    "Romina Racca"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/rominaracca/AngularJS",
+  "moduleType": []
+}

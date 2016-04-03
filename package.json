@@ -1,0 +1,29 @@
+{
+  "name": "clase3",
+  "version": "1.0.0",
+  "description": "Proyecto de angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rominaracca/AngularJS.git"
+  },
+  "author": "Romina Racca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rominaracca/AngularJS/issues"
+  },
+  "homepage": "https://github.com/rominaracca/AngularJS#readme",
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^3.2.2",
+    "gulp-jshint": "^2.0.0",
+    "gulp-open": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
+    "jshint": "^2.9.1"
+  }
+}
