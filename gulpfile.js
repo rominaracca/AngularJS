@@ -9,6 +9,7 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var open = require('gulp-open');
+var runSequence = require('run-sequence');
 
 // Link task
 gulp.task('lint', function() {
@@ -93,12 +94,16 @@ gulp.task('compress', ['compressJs', 'compressCss']);
 // Abre una pestaña con el archivo index en el browser por default
 gulp.task('open', function(){
   gulp.src('./index.html')
-  .pipe(open());
+  .pipe(open({uri: 'http://localhost:9000/'}));
 });
 
 // Default Task
 // Si se ejecuta gulp sin ningun parametro entonces GULP ejecuta lq tarea default
-gulp.task('default', ['lint', 'scripts']);
+gulp.task('default', function (callback) {
+  runSequence( ['lint', 'scripts', 'sass'],
+              'compress',
+               callback);
+  });
 
 // La tarea "serve" ejecuta la lista de tareas que estan en el array
 // para ejecutarla en la consola coloco #gulp serve
