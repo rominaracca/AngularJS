@@ -1,20 +1,20 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('app.core')
-        .factory('dataservice', dataservice);
+  angular
+  .module('app.core')
+  .factory('dataservice', dataservice);
 
-    // factory.$inject = ['dependencies'];
+  // factory.$inject = ['dependencies'];
 
-    /* @ngInject */
-    function dataservice() {
-      var todos = [
-        {
-          "id": 0,
-          "title": "Aprender Gulp",
-          "description": "Estudiar y aprender el uso de GULP",
-          "done": true
+  /* @ngInject */
+  function dataservice() {
+    var todos = [
+      {
+        "id": 0,
+        "title": "Aprender Gulp",
+        "description": "Estudiar y aprender el uso de GULP",
+        "done": true
       },
       {
         "id": 1,
@@ -67,36 +67,45 @@
     ];
 
 
-      //agregar aca variables y funciones a exponer
-        var service = {
-            getToDo: getToDo,
-            removeToDo: removeToDo
-        };
+    //agregar aca variables y funciones a exponer
+    var service = {
+      getToDo: selectToDo,
+      removeToDo: deleteToDo,
+      editToDo: updqteToDo,
+      addToDo: insertToDo
+    };
 
-        return service;
+    return service;
 
-        function getToDo() {
-          return todos;
-      }
+    // lista de tareas
+    function selectToDo() {
+      return todos;
+    }
 
-
-      function removeToDo() {
-        for (var i = 0; i < todos.length; i++) {
-            if (todos[i].id === id) {
-              todos.splice(i, 1);
-              break;
-            }
-          }
-      }
-
-      function editToDo() {
-        for (var i = 0; i < todos.length; i++) {
-           if (todos[i].id === id) {
-             todos.splice(i, 1, todo);
-             break;
-           }
-         }
-
+    // eliminar una tarea
+    function deleteToDo(id) {
+      for (var i = 0; i < todos.length; i++) {
+        if (todos[i].id === id) {
+          todos.splice(i, 1);
+          break;
+        }
       }
     }
+
+    // modificar una tarea
+    function updateToDo(todo) {
+      for (var i = 0; i < todos.length; i++) {
+        if (todos[i].id === id) {
+          todos.splice(i, 1, todo);
+          break;
+        }
+      }
+    }
+
+    // agregar una tarea
+    function insertToDo(todo) {
+          todos.push(todo);
+        }
+
+  }
 })();
