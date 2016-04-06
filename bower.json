@@ -9,6 +9,8 @@
   "homepage": "https://github.com/rominaracca/AngularJS",
   "moduleType": [],
   "dependencies": {
-    "angular": "^1.5.3"
+    "angular": "^1.5.3",
+    "angular-ui-router": "^0.2.18",
+    "angular-material": "^1.0.7"
   }
 }

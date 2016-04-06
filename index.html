@@ -1,18 +1,21 @@
-<html>
+<html ng-app="app">
     <head>
         <title>AngularJS App</title>
-        <!-- <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"> -->
-        <!-- <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css"> -->
+        <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
         <link type="text/css" rel="stylesheet" href="/dist/css/angularProject.css">
     </head>
     <body>
 
-        <div class="testConWatch">
-          Test
+        <div ui-view style="height: 100%;">
+
         </dvi>
 
         <!-- Scripts -->
         <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="/bower_components/angular-aria/angular-aria.js"></script>
+        <script src="/bower_components/angular-animate/angular-animate.js"></script>
+        <script src="/bower_components/angular-material/angular-material.js"></script>
         <script src="/dist/js/angularProject.js"></script>
 
     </body>
