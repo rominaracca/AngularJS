@@ -71,7 +71,7 @@
     var service = {
       getToDo: selectToDo,
       removeToDo: deleteToDo,
-      editToDo: updqteToDo,
+      editToDo: updateToDo,
       addToDo: insertToDo
     };
 
