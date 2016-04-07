@@ -9,6 +9,9 @@
 
   /* @ngInject */
   function dataservice() {
+
+    var id = 100;
+
     var todos = [
       {
         "id": 0,
@@ -105,6 +108,7 @@
 
     // agregar una tarea
     function insertToDo(todo) {
+      todo.id = ++id;
       todos.push(todo);
     }
 
@@ -116,7 +120,7 @@
           break;
         }
       }
-      return null; 
+      return null;
     }
 
 
