@@ -1,0 +1,32 @@
+<div layout="row" layout-align="center center"  ng-cloak style="overflow: auto; background-color: #F2F2F2; height: 100%;">
+  <md-card style="width: 50%;">
+    <md-card-content style="padding-bottom: 8px;">
+
+      <div layout="row" layout-align="center center">
+        <div flex="80">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Titulo</label>
+            <input ng-model="vm.getToDoById.title">
+          </md-input-container>
+        </div>
+      </div>
+
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>Descripcion</label>
+        <input ng-model="vm.getToDoById.description">
+      </md-input-container>
+      <md-divider></md-divider>
+
+      <div layout="row" layout-align="space-between center">
+        <md-checkbox ng-model="vm.getToDoById.done" aria-label="Estado" style="margin-top: auto; margin-bottom: auto;">
+          Estado: {{ vm.getToDoById.done }}
+        </md-checkbox>
+        <div layout="row" layout-align="end">
+          <md-button class="md-raised md-primary" ng-click="vm.saveToDo(vm.getToDoById)">Guardar</md-button>
+          <md-button>Eliminar</md-button>
+        </div>
+      </div>
+
+    </md-card-content>
+  </md-card>
+</div>
