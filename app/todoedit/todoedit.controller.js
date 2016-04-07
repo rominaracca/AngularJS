@@ -14,6 +14,7 @@
         // defino todas las variables y funciones que deseo esten en la vista
         vm.getToDoById = null;
         vm.saveToDo = save;
+        vm.cancelToDo = cancel;
 
         // ejecuto todo aquello a inicializar
         activate();
@@ -28,6 +29,10 @@
 
         function save(todo) {
           dataservice.editToDo(todo);
+          $state.go('view');
+        }
+
+        function cancel() {
           $state.go('view');
         }
 
