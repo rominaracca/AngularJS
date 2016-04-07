@@ -1,8 +1,6 @@
 (function() {
     'use strict';
 
-    angular.module('app.todoview', [
-    'app.core'
-  ]);
+    angular.module('app.todoview', ['app.core']);
 
 })();
