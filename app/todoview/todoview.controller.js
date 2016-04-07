@@ -14,6 +14,7 @@
         // defino todas las variables y funciones que deseo esten en la vista
         vm.getToDo = [];
         vm.editToDo = edit;
+        vm.newToDo = add;
 
         // ejecuto todo aquello a inicializar
         activate();
@@ -29,6 +30,10 @@
 
         function edit(identif) {
           $state.go('edit', {id: identif} );
+        }
+
+        function add() {
+          $state.go('new');
         }
     }
 })();

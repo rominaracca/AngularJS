@@ -1,5 +1,6 @@
 <div layout="row" layout-sm="column" layout-wrap layout-align="center start" style="overflow: auto; background-color: #F2F2F2; height: 100%;">
 
+  <!-- Lista de cards -->
   <md-card ng-repeat="task in vm.getToDo">
     <md-card-content style="padding-bottom: 8px">
       <div layout="row" layout-align="center center">
@@ -16,10 +17,16 @@
         </md-checkbox>
         <div layout="row" layout-align="end">
           <md-button ng-click="vm.editToDo(task.id)">Editar</md-button>
-          <md-button>Eliminar</md-button>
+          <!-- <md-button>Eliminar</md-button> -->
         </div>
       </div>
     </md-card-content>
   </md-card>
 
+  <!--  Boton nuevo-->
+  <div >
+    <md-button class="md-fab floating-button" aria-label="Nuevo" ng-click="vm.newToDo()">
+      <md-icon md-font-set="material-icons">add</md-icon>
+    </md-button>
+  </div>
 </div>
