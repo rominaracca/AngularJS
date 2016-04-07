@@ -1,27 +1,22 @@
-<div ng-cloak style="height: 100%;">
-  <md-content class="md-padding" layout-xs="column" layout-wrap layout="row" style="height: 100%;background-color:#EEEEEE">
+<div layout="row" layout-sm="column" layout-wrap layout-align="center center" style="overflow: auto; background-color: #F2F2F2">
 
-    <div flex-xs flex-gt-xs="50" layout="column"  ng-repeat="task in vm.getToDo">
-      <md-card>
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">{{task.title}}</span>
-            <span class="md-subhead">{{task.description}}</span>
-          </md-card-title-text>
-          <md-card-title-media>
-            <!-- <div class="md-media-lg card-media"></div> -->
-            <md-checkbox ng-model="task.done" aria-label="Estado">
-              Estado: {{ task.done }}
-            </md-checkbox>
-          </md-card-title-media>
-        </md-card-title>
-        <!-- Acciones -->
-        <md-card-actions layout="row" layout-align="end center">
-          <md-button>Editar</md-button>
-          <md-button>Eliminar</md-button>
-        </md-card-actions>
-      </md-card>
-    </div>
+  <md-card ng-repeat="task in vm.getToDo">
+    <md-card-content style="padding-bottom: 8px">
+      <div layout="row" layout-align="center center">
+        <div flex="80">
+          <p class="md-title" style="margin: 0px 0px; ">{{task.title}}</p >
+        </div>
+      </div>
+      <p>{{task.description}} </p>
+      <md-divider></md-divider>
 
-  </md-content>
+      <div layout="row" layout-align="space-between center">
+        <md-checkbox ng-model="task.done" aria-label="Estado" style="margin-top: auto; margin-bottom: auto;">
+          Estado: {{ task.done }}
+        </md-checkbox>
+        <md-button>Editar</md-button>
+      </div>
+    </md-card-content>
+  </md-card>
+
 </div>
