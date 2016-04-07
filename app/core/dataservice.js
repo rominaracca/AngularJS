@@ -72,7 +72,8 @@
       getToDo: selectToDo,
       removeToDo: deleteToDo,
       editToDo: updateToDo,
-      addToDo: insertToDo
+      addToDo: insertToDo,
+      getToDoById: selectToDoById
     };
 
     return service;
@@ -95,7 +96,7 @@
     // modificar una tarea
     function updateToDo(todo) {
       for (var i = 0; i < todos.length; i++) {
-        if (todos[i].id === id) {
+        if (todos[i].id === todo.id) {
           todos.splice(i, 1, todo);
           break;
         }
@@ -104,8 +105,20 @@
 
     // agregar una tarea
     function insertToDo(todo) {
-          todos.push(todo);
+      todos.push(todo);
+    }
+
+    // tarea by id
+    function selectToDoById(id) {
+      for (var i = 0; i < todos.length; i++) {
+        if (todos[i].id === id) {
+          return todos[i];
+          break;
         }
+      }
+      return null; 
+    }
+
 
   }
 })();
