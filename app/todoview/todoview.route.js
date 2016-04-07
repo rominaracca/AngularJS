@@ -8,7 +8,7 @@
       $stateProvider
       .state('view', {
         url: "/",
-        templateUrl: "app/todoView/todoview.view.html",
+        templateUrl: "app/todoview/todoview.view.html",
         controller: 'ToDoViewController',
         controllerAs: 'vm'
       });
