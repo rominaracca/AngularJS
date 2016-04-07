@@ -8,7 +8,9 @@
       $stateProvider
       .state('new', {
         url: "/new",
-        templateUrl: "app/todonew/todonew.view.html"
+        templateUrl: "app/todonew/todonew.view.html",
+        controller: 'ToDoNewController',
+        controllerAs: 'vm'
       });
     }
 }());
