@@ -5,26 +5,30 @@
         .module('app.todoview')
         .controller('ToDoViewController', ToDoViewController);
 
-    ToDoViewController.$inject = ['dataservice'];
+    ToDoViewController.$inject = ['dataservice', '$state'];
 
     /* @ngInject */
-    function ToDoViewController(dataservice) {
+    function ToDoViewController(dataservice, $state) {
         var vm = this;
 
-// defino todas las variables que deseo esten en la vista
+        // defino todas las variables y funciones que deseo esten en la vista
         vm.getToDo = [];
+        vm.editToDo = edit;
 
-// ejecuto todo aquello a inicializar
+        // ejecuto todo aquello a inicializar
         activate();
 
-// FUNCIONES
+        // Funciones
         function activate() {
             vm.getToDo = getDo();
         }
 
         function getDo() {
-          console.log(dataservice.getToDo());
           return dataservice.getToDo();
+        }
+
+        function edit(identif) {
+          $state.go('edit', {id: identif} );
         }
     }
 })();
